@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SignupModel } from './signup.model';
 import { AuthserviceService } from '../authservice.service';
-import { UntypedFormBuilder,Validators,FormGroup } from '@angular/forms';
+//import { UntypedFormBuilder,Validators,FormGroup } from '@angular/forms';
+import {FormGroup,FormControl,Validators} from '@angular/forms';
 
 
 @Component({
@@ -12,8 +13,10 @@ import { UntypedFormBuilder,Validators,FormGroup } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private fb: UntypedFormBuilder,public _router:Router,private _auth:AuthserviceService) { }
-  
+  //constructor(private fb: UntypedFormBuilder,public _router:Router,private _auth:AuthserviceService) { }
+  constructor(private _router:Router, private _auth:AuthserviceService) {
+    
+   }
   user = new SignupModel("","","",0);
   
   ngOnInit(): void {
